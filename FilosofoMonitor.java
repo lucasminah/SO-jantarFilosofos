@@ -1,9 +1,9 @@
-public class Filosofo implements Runnable {
+public class FilosofoMonitor implements Runnable {
     private int sleepTime;
     private Object talherEsquerda;
     private Object talherDireita;
 
-    public Filosofo(Object talherEsquerda, Object talherDireita, int sleepTime) {
+    public FilosofoMonitor(Object talherEsquerda, Object talherDireita, int sleepTime) {
         this.talherEsquerda = talherEsquerda;
         this.talherDireita = talherDireita;
         this.sleepTime = sleepTime;

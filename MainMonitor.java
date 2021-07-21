@@ -1,8 +1,8 @@
-public class Main {
+public class MainMonitor {
     public static void main(String[] args) throws Exception {
         int numeroFilosofos = 6;
         int tempoEspera = 500;
-        Filosofo[] filosofos = new Filosofo[numeroFilosofos];
+        FilosofoMonitor[] filosofos = new FilosofoMonitor[numeroFilosofos];
         Object[] talheres = new Object[numeroFilosofos];
 
         for (int i = 0; i < 6; i++) {
@@ -13,9 +13,9 @@ public class Main {
             Object talherEsquerda = talheres[i];
             Object talherDireita = talheres[(i + 1) % numeroFilosofos];
             if (i == numeroFilosofos - 1) {
-                filosofos[i] = new Filosofo(talherEsquerda, talherDireita, tempoEspera);
+                filosofos[i] = new FilosofoMonitor(talherEsquerda, talherDireita, tempoEspera);
             } else {
-                filosofos[i] = new Filosofo(talherDireita, talherEsquerda, tempoEspera);
+                filosofos[i] = new FilosofoMonitor(talherDireita, talherEsquerda, tempoEspera);
             }
             Thread t = new Thread(filosofos[i], "Filosofo " + (i + 1));
             t.start();
