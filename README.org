@@ -1,0 +1,23 @@
+* Jantar dos Filósofos
+  Problema resolvido usando Java, com monitores e semáforos. Para
+  controlar o número de filósofos e o tempo de espera entre operações,
+  basta mudar as variáveis =numeroFilosofos= e =tempoEspera= no arquivo
+  Main respectivo.
+
+** Rodando
+   Para rodar uma das versões após clonar o repositório, basta
+   compilar os arquivos e rodar o Main associado, dessa forma:
+*** Versão com semáforos
+    #+begin_src shell
+      cd SO-jantarFilosofos
+      javac FilosofoSemaforo.java TalherSemaforo.java MainSemaforo.java
+      java MainSemaforo
+    #+end_src
+    
+*** Versão com monitores
+    #+begin_src shell
+      cd SO-jantarFilosofos
+      javac FilosofoMonitor.java MainMonitor.java
+      java MainMonitor
+    #+end_src
+    
